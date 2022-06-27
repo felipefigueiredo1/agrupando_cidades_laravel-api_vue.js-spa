@@ -19,7 +19,7 @@ class ProductController extends Controller
     {
         $product = new Product([
             'name' => $request->input('name'),
-            'detail' => $request->input('detail'),
+            'price' => (int)$request->input('price'),
             'campaign_id' => $request->input('campaign_id'),
         ]);
 

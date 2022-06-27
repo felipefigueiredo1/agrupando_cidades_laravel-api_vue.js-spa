@@ -19,7 +19,12 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary mt-3">Criar</button>
+                    <div v-if="cities == ''" class="mt-2">
+                        <strong>Tenha ao menos uma cidade para criar algum grupo!</strong>
+                    </div>
+                    <div v-else>
+                        <button type="submit" class="btn btn-primary mt-3">Criar</button>
+                    </div>
                 </form>
             </div>
         </div>

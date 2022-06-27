@@ -9,8 +9,8 @@
                         <input type="text" class="form-control" v-model="product.name">
                     </div>
                     <div class="form-group">
-                        <label>Detalhes</label>
-                        <input type="text" class="form-control" v-model="product.detail">
+                        <label>Preço</label>
+                        <input type="text" class="form-control" v-model="product.price">
                     </div>
                     <div v-for="(campaign, index) in campaigns" :key="index">
                         <div>
@@ -22,7 +22,12 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary mt-3">Create</button>
+                    <div v-if="campaigns == ''" class="mt-2">
+                        <strong>Tenha ao menos uma campanha para criar algum produto!</strong>
+                    </div>
+                    <div v-else>
+                        <button type="submit" class="btn btn-primary mt-3">Criar</button>
+                    </div>
                 </form>
             </div>
         </div>

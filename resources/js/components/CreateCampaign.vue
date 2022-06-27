@@ -21,7 +21,12 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary mt-3">Criar</button>
+                    <div v-if="groups == ''" class="mt-2">
+                        <strong>Tenha ao menos um grupo para criar alguma campanha!</strong>
+                    </div>
+                    <div v-else>
+                        <button type="submit" class="btn btn-primary mt-3">Criar</button>
+                    </div>
                 </form>
             </div>
         </div>
