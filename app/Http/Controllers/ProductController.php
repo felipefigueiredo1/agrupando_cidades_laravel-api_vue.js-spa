@@ -10,9 +10,9 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all()->toArray();
+        $products = Product::with('campaign')->get();
         $campaigns = Campaign::with('product')->get();
-        return response()->json(['products' => array_reverse($products), 'campaigns' => $campaigns]);
+        return response()->json(['products' => $products, 'campaigns' => $campaigns]);
     }
 
     public function store(Request $request)
