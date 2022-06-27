@@ -10,21 +10,22 @@
                         <label>Desconto</label>
                         <input type="number" class="form-control" v-model="campaign.descount">
                     </div>
-                    <div v-for="(group, index) in groups" :key="index">
-                        <div v-if="group.campaign == false">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" v-on:click="addCheck(group.id)"
-                                    id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    {{ group.name }}
-                                </label>
-                            </div>
-                        </div>
-                    </div>
                     <div v-if="groups == ''" class="mt-2">
                         <strong>Tenha ao menos um grupo para criar alguma campanha!</strong>
                     </div>
-                    <div v-else>
+                    <div v-else class="mt-2">
+                        <p>Selecione os grupos da campanha</p>
+                        <div v-for="(group, index) in groups" :key="index">
+                            <div v-if="group.campaign == false">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" v-on:click="addCheck(group.id)"
+                                        id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        {{ group.name }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                         <button type="submit" class="btn btn-primary mt-3">Criar</button>
                     </div>
                 </form>

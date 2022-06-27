@@ -8,21 +8,23 @@
                         <label>Nome</label>
                         <input type="text" class="form-control" v-model="group.name">
                     </div>
-                    <div v-for="(city, index) in cities" :key="index">
-                        <div v-if="city.group == false">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" v-on:click="addCheck(city.id)"
-                                    id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    {{ city.name }}
-                                </label>
-                            </div>
-                        </div>
-                    </div>
                     <div v-if="cities == ''" class="mt-2">
                         <strong>Tenha ao menos uma cidade para criar algum grupo!</strong>
                     </div>
-                    <div v-else>
+                    <div v-else class="mt-2">
+                        <p>Selecione as cidades do grupo</p>
+
+                        <div v-for="(city, index) in cities" :key="index">
+                            <div v-if="city.group == false">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" v-on:click="addCheck(city.id)"
+                                        id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        {{ city.name }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
                         <button type="submit" class="btn btn-primary mt-3">Criar</button>
                     </div>
                 </form>

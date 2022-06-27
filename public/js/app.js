@@ -5756,6 +5756,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5900,6 +5901,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5957,6 +5960,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
 //
 //
 //
@@ -30508,41 +30514,6 @@ var render = function () {
               }),
             ]),
             _vm._v(" "),
-            _vm._l(_vm.groups, function (group, index) {
-              return _c("div", { key: index }, [
-                group.campaign == false
-                  ? _c("div", [
-                      _c("div", { staticClass: "form-check" }, [
-                        _c("input", {
-                          staticClass: "form-check-input",
-                          attrs: { type: "checkbox", id: "flexCheckDefault" },
-                          on: {
-                            click: function ($event) {
-                              return _vm.addCheck(group.id)
-                            },
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "label",
-                          {
-                            staticClass: "form-check-label",
-                            attrs: { for: "flexCheckDefault" },
-                          },
-                          [
-                            _vm._v(
-                              "\n                                " +
-                                _vm._s(group.name) +
-                                "\n                            "
-                            ),
-                          ]
-                        ),
-                      ]),
-                    ])
-                  : _vm._e(),
-              ])
-            }),
-            _vm._v(" "),
             _vm.groups == ""
               ? _c("div", { staticClass: "mt-2" }, [
                   _c("strong", [
@@ -30551,18 +30522,62 @@ var render = function () {
                     ),
                   ]),
                 ])
-              : _c("div", [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-primary mt-3",
-                      attrs: { type: "submit" },
-                    },
-                    [_vm._v("Criar")]
-                  ),
-                ]),
-          ],
-          2
+              : _c(
+                  "div",
+                  { staticClass: "mt-2" },
+                  [
+                    _c("p", [_vm._v("Selecione os grupos da campanha")]),
+                    _vm._v(" "),
+                    _vm._l(_vm.groups, function (group, index) {
+                      return _c("div", { key: index }, [
+                        group.campaign == false
+                          ? _c("div", [
+                              _c("div", { staticClass: "form-check" }, [
+                                _c("input", {
+                                  staticClass: "form-check-input",
+                                  attrs: {
+                                    type: "checkbox",
+                                    id: "flexCheckDefault",
+                                  },
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.addCheck(group.id)
+                                    },
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass: "form-check-label",
+                                    attrs: { for: "flexCheckDefault" },
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                    " +
+                                        _vm._s(group.name) +
+                                        "\n                                "
+                                    ),
+                                  ]
+                                ),
+                              ]),
+                            ])
+                          : _vm._e(),
+                      ])
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary mt-3",
+                        attrs: { type: "submit" },
+                      },
+                      [_vm._v("Criar")]
+                    ),
+                  ],
+                  2
+                ),
+          ]
         ),
       ]),
     ]),
@@ -30712,59 +30727,68 @@ var render = function () {
               }),
             ]),
             _vm._v(" "),
-            _vm._l(_vm.cities, function (city, index) {
-              return _c("div", { key: index }, [
-                city.group == false
-                  ? _c("div", [
-                      _c("div", { staticClass: "form-check" }, [
-                        _c("input", {
-                          staticClass: "form-check-input",
-                          attrs: { type: "checkbox", id: "flexCheckDefault" },
-                          on: {
-                            click: function ($event) {
-                              return _vm.addCheck(city.id)
-                            },
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "label",
-                          {
-                            staticClass: "form-check-label",
-                            attrs: { for: "flexCheckDefault" },
-                          },
-                          [
-                            _vm._v(
-                              "\n                                " +
-                                _vm._s(city.name) +
-                                "\n                            "
-                            ),
-                          ]
-                        ),
-                      ]),
-                    ])
-                  : _vm._e(),
-              ])
-            }),
-            _vm._v(" "),
             _vm.cities == ""
               ? _c("div", { staticClass: "mt-2" }, [
                   _c("strong", [
                     _vm._v("Tenha ao menos uma cidade para criar algum grupo!"),
                   ]),
                 ])
-              : _c("div", [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-primary mt-3",
-                      attrs: { type: "submit" },
-                    },
-                    [_vm._v("Criar")]
-                  ),
-                ]),
-          ],
-          2
+              : _c(
+                  "div",
+                  { staticClass: "mt-2" },
+                  [
+                    _c("p", [_vm._v("Selecione as cidades do grupo")]),
+                    _vm._v(" "),
+                    _vm._l(_vm.cities, function (city, index) {
+                      return _c("div", { key: index }, [
+                        city.group == false
+                          ? _c("div", [
+                              _c("div", { staticClass: "form-check" }, [
+                                _c("input", {
+                                  staticClass: "form-check-input",
+                                  attrs: {
+                                    type: "checkbox",
+                                    id: "flexCheckDefault",
+                                  },
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.addCheck(city.id)
+                                    },
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass: "form-check-label",
+                                    attrs: { for: "flexCheckDefault" },
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                    " +
+                                        _vm._s(city.name) +
+                                        "\n                                "
+                                    ),
+                                  ]
+                                ),
+                              ]),
+                            ])
+                          : _vm._e(),
+                      ])
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary mt-3",
+                        attrs: { type: "submit" },
+                      },
+                      [_vm._v("Criar")]
+                    ),
+                  ],
+                  2
+                ),
+          ]
         ),
       ]),
     ]),
@@ -30861,55 +30885,6 @@ var render = function () {
               }),
             ]),
             _vm._v(" "),
-            _vm._l(_vm.campaigns, function (campaign, index) {
-              return _c("div", { key: index }, [
-                _c("div", [
-                  _c("div", { staticClass: "form-check" }, [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.product.campaign_id,
-                          expression: "product.campaign_id",
-                        },
-                      ],
-                      staticClass: "form-check-input",
-                      attrs: { type: "radio", id: "flexCheckDefault" },
-                      domProps: {
-                        value: campaign.id,
-                        checked: _vm._q(_vm.product.campaign_id, campaign.id),
-                      },
-                      on: {
-                        change: function ($event) {
-                          return _vm.$set(
-                            _vm.product,
-                            "campaign_id",
-                            campaign.id
-                          )
-                        },
-                      },
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "label",
-                      {
-                        staticClass: "form-check-label",
-                        attrs: { for: "flexCheckDefault" },
-                      },
-                      [
-                        _vm._v(
-                          "\n                                " +
-                            _vm._s(campaign.name) +
-                            "\n                            "
-                        ),
-                      ]
-                    ),
-                  ]),
-                ]),
-              ])
-            }),
-            _vm._v(" "),
             _vm.campaigns == ""
               ? _c("div", { staticClass: "mt-2" }, [
                   _c("strong", [
@@ -30918,18 +30893,77 @@ var render = function () {
                     ),
                   ]),
                 ])
-              : _c("div", [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-primary mt-3",
-                      attrs: { type: "submit" },
-                    },
-                    [_vm._v("Criar")]
-                  ),
-                ]),
-          ],
-          2
+              : _c(
+                  "div",
+                  [
+                    _c("p", [
+                      _vm._v("Selecione a campanha que o produto pertence"),
+                    ]),
+                    _vm._v(" "),
+                    _vm._l(_vm.campaigns, function (campaign, index) {
+                      return _c("div", { key: index }, [
+                        _c("div", [
+                          _c("div", { staticClass: "form-check" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.product.campaign_id,
+                                  expression: "product.campaign_id",
+                                },
+                              ],
+                              staticClass: "form-check-input",
+                              attrs: { type: "radio", id: "flexCheckDefault" },
+                              domProps: {
+                                value: campaign.id,
+                                checked: _vm._q(
+                                  _vm.product.campaign_id,
+                                  campaign.id
+                                ),
+                              },
+                              on: {
+                                change: function ($event) {
+                                  return _vm.$set(
+                                    _vm.product,
+                                    "campaign_id",
+                                    campaign.id
+                                  )
+                                },
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              {
+                                staticClass: "form-check-label",
+                                attrs: { for: "flexCheckDefault" },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                    " +
+                                    _vm._s(campaign.name) +
+                                    "\n                                "
+                                ),
+                              ]
+                            ),
+                          ]),
+                        ]),
+                      ])
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary mt-3",
+                        attrs: { type: "submit" },
+                      },
+                      [_vm._v("Criar")]
+                    ),
+                  ],
+                  2
+                ),
+          ]
         ),
       ]),
     ]),
